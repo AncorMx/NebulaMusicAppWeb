@@ -1,0 +1,18 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+# Eclipse
+.classpath
+.project
+.settings/
+# NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
