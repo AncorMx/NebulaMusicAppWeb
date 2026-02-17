@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html moderno - Introducción</title>
+</head>
+<body>
+    <figure>
+        <img src="https://upload.wikipedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg" alt="Imagen de prueba" width="100%">
+        <figcaption>
+            Figura 1: Fotografia de prueba
+        </figcaption>
+    </figure>
+
+    <!-- Utiliza principalmente para imagenes responsivas - Permite definir distintas versiones segun el tamaño de la pantalla -->
+    <picture>
+        <source srcset="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200" media="(min-width: 768px)">
+        <source srcset="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600" media="(max-width: 767px)">
+
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600" alt="Imagen de prueba con source">
+    </picture>
+
+    <!-- SVG es un vectorial (independientemente del tamaño nunca se pixelea)-->
+    <svg>
+        <circle cx="60" cy="60" r="50" stroke="black" stroke-width="2" fill="lightblue"></circle>
+    </svg>
+
+    <!-- datalist: lista una lista de sugerencias, te da ciertos valores que puedes poner en el input -->
+    <label>
+        Lenguaje Favorito
+        <input list="languages">
+    </label>
+
+    <br><datalist id="languages">
+        <option value="Java"></option>
+        <option value="JavaScript"></option>
+        <option value="Python"></option>
+        <option value="C#"></option>
+    </datalist>
+
+    <details>
+        <summary>¿Qué es HTML semántico?</summary>
+        <p>
+            Es el uso de etiquetas que describen el significado del contenido y no solo su apartado
+        </p>
+    </details>
+<!-- Sirve para cargar videos-->
+    <video controls autoplay muted loop poster="">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+
+        <track kind="subtitles"></track>
+    </video>
+
+    <audio src="https://www.w3schools.com/html/horse.mp3" controls>
+
+    </audio>
+
+    <iframe width="560" src="https://www.youtube.com/embed/3nYLTiY5skU" frameborder="0"></iframe>
+
+    <button onclick="abrirModal()">Abrir mensaje</button>
+    <dialog id="miDialogo">
+        <p>Este es un dialogo HTML nativo</p>
+        <button onclick="cerrarModal()">Cerrar</button>
+    </dialog>
+
+    <script>
+        function abrirModal(){
+            document.getElementById("miDialogo").showModal();
+        }
+
+        function cerrarModal() {
+            document.getElementById("miDialogo").close();
+        }
+
+    </script>
+</body>
+</html>

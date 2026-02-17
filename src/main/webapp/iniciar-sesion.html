@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nébula music - Iniciar sesión</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <img src="imgs/nebula-03.svg" alt="Nébula logo" height="80">
+            <h1>Iniciar sesión</h1>
+        </header>
+
+        <main>
+            <section>
+                  <form name="form_iniciar_sesion" action="autenticacion" method="post" enctype="application/x-www-form-urlencoded">
+                    <section>
+                        <span>Utiliza tus credenciales para iniciar sesión</span>
+                    </section>
+                    <section name="correo">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="txt_correo" id="correo" required minlength="10" maxlength="100" autocomplete="email">
+                    </section>
+                    <section name="password">
+                        <label for="password">Password</label>
+                        <input type="password" name="txt_contrasenia" id="password" required autocomplete="off">
+                    </section>
+                    <search name="options">
+                        <p>¿Aún no tienes una cuenta? <a href="./registro.html"> Registrate aquí</a></p>
+                        <button type="submit">Iniciar Sesion</button>
+                        <button type="reset">Limpiar Form</button>
+                    </search>
+                  </form>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                Síguenos en nuestras redes.
+                <div>
+                    <a href="www.instagram.com" target="_blank">Instagram</a>
+                    <a href="www.facebook.com" target="_blank">Facebook</a>
+                    <a href="www.tiktok.com" target="_blank">Tiktok</a>
+                </div>
+            </div>
+
+            Copyright Nébula 2025. 
+        </footer>
+
+    </body>
+</html>
