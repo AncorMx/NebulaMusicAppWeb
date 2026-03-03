@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Nébula music - Iniciar sesión</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <header>
-            <img src="imgs/nebula-03.svg" alt="Nébula logo" height="80">
-            <h1>Iniciar sesión</h1>
-        </header>
 
-        <main>
-            <section>
-                  <form name="form_iniciar_sesion" action="autenticacion" method="post" enctype="application/x-www-form-urlencoded">
-                    <section>
-                        <span>Utiliza tus credenciales para iniciar sesión</span>
-                    </section>
-                    <section name="correo">
-                        <label for="correo">Correo</label>
-                        <input type="email" name="txt_correo" id="correo" required minlength="10" maxlength="100" autocomplete="email">
-                    </section>
-                    <section name="password">
-                        <label for="password">Password</label>
-                        <input type="password" name="txt_contrasenia" id="password" required autocomplete="off">
-                    </section>
-                    <search name="options">
-                        <p>¿Aún no tienes una cuenta? <a href="./registro.html"> Registrate aquí</a></p>
-                        <button type="submit">Iniciar Sesion</button>
-                        <button type="reset">Limpiar Form</button>
-                    </search>
-                  </form>
-            </section>
-        </main>
+<head>
+    <title>Nébula music</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+</head>
 
-        <footer>
-            <div>
-                Síguenos en nuestras redes.
-                <div>
-                    <a href="www.instagram.com" target="_blank">Instagram</a>
-                    <a href="www.facebook.com" target="_blank">Facebook</a>
-                    <a href="www.tiktok.com" target="_blank">Tiktok</a>
+<body>
+    <main class="auth-container">
+        <section class="auth-card">
+            <form class="form_iniciar_sesion" name="form_iniciar_sesion" method="post" action="/autenticacion"
+                enctype="application/x-www-form-urlencoded">
+                <div name="logo_usuario" class="form-logo">
+                    <img src="./imgs/nebula-03.svg" alt="logo de nebula music">
                 </div>
+                <div name="titulo" class="form-header">
+                    <h3>Inicia sesión</h3>
+                    <span class="form-subtitle">Utiliza tus credenciales para iniciar</span>
+                </div>
+                <div name="correo" class="form-group">
+                    <label for="correo">Correo</label>
+                    <input id="correo" name="correo" type="email" required minlength="5" maxlength="100">
+                </div>
+                <div name="contrasenia" class="form-group">
+                    <label for="contrasenia">Contraseña</label>
+                    <input id="contrasenia" name="contrasenia" type="password" required>
+                </div>
+                <div name="options">
+                    <p>¿Aún no tienes una cuenta? <a href="./registro.html">Regístrate</a></p>
+                    <button type="submit" class="btn-primary">Iniciar</button>
+                    <button type="reset" class="btn-secundary">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            Síguenos en nuestras redes.
+            <div>
+                <a href="www.instagram.com" target="_blank">Instagram</a>
+                <a href="www.facebook.com" target="_blank">Facebook</a>
+                <a href="wwwtiktok.com" target="_blank">Tiktok</a>
             </div>
+        </div>
 
-            Copyright Nébula 2025. 
-        </footer>
+        <p>Copyright Nébula 2025.</p>
+        <a href="./tyc.html" target="_blank">Términos y condiciones</a>
+    </footer>
 
-    </body>
+</body>
+
 </html>
